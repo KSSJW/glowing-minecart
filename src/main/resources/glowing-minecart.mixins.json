@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "com.kssjw.glowingminecart.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"MinecartSetMixin",
+		"MinecartRemoveMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
