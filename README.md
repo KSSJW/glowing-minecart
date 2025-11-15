@@ -1,4 +1,4 @@
-# Glowing Minecaer
+# Glowing Minecart
 - Based on the original Minecraft minecart lighting.
 - Dynamic lighting is simulated by updating virtual lighting blocks above the minecarts in real time.
 - In multiplayer games, the minecarts' lighting is visible to **all players**.
