@@ -1,6 +1,5 @@
 package com.kssjw.glowingminecart.manager;
 
-import com.kssjw.glowingminecart.block.ModBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -9,6 +8,8 @@ import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import com.kssjw.glowingminecart.block.LightBlock;
 
 public class LightSourceManager {
     private static final Map<AbstractMinecartEntity, BlockPos> ACTIVE_LIGHTS = new HashMap<>();
@@ -25,7 +26,7 @@ public class LightSourceManager {
 
             // 移除旧光源（如果位置变化或者矿车死亡）
             if (!newPos.equals(oldPos) || !cart.isAlive()) {
-                if (world.getBlockState(oldPos).isOf(ModBlock.INVISIBLE_LIGHT)) {
+                if (world.getBlockState(oldPos).isOf(LightBlock.LIGHT_BLOCK)) {
                     world.removeBlock(oldPos, false);
                 }
                 it.remove();
@@ -34,7 +35,7 @@ public class LightSourceManager {
             // 如果矿车还活着，放置新的光源并更新 ACTIVE_LIGHTS
             if (cart.isAlive()) {
                 if (world.getBlockState(newPos).isAir()) {
-                    world.setBlockState(newPos, ModBlock.INVISIBLE_LIGHT.getDefaultState());
+                    world.setBlockState(newPos, LightBlock.LIGHT_BLOCK.getDefaultState());
                 }
                 ACTIVE_LIGHTS.put(cart, newPos);
             }
@@ -54,13 +55,13 @@ public class LightSourceManager {
         ServerWorld serverWorld = (ServerWorld) world;
 
         // 移除旧光源
-        if (oldPos != null && serverWorld.getBlockState(oldPos).isOf(ModBlock.INVISIBLE_LIGHT)) {
+        if (oldPos != null && serverWorld.getBlockState(oldPos).isOf(LightBlock.LIGHT_BLOCK)) {
             serverWorld.removeBlock(oldPos, false);
         }
 
         // 放置新光源
         if (serverWorld.getBlockState(newPos).isAir()) {
-            serverWorld.setBlockState(newPos, ModBlock.INVISIBLE_LIGHT.getDefaultState());
+            serverWorld.setBlockState(newPos, LightBlock.LIGHT_BLOCK.getDefaultState());
             ACTIVE_LIGHTS.put(cart, newPos);
         }
     }
@@ -73,7 +74,7 @@ public class LightSourceManager {
         World world = cart.getWorld();
         if (world.isClient()) return;
 
-        if (world.getBlockState(pos).isOf(ModBlock.INVISIBLE_LIGHT)) {
+        if (world.getBlockState(pos).isOf(LightBlock.LIGHT_BLOCK)) {
             world.removeBlock(pos, false);
         }
     }

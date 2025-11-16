@@ -1,6 +1,6 @@
 package com.kssjw.glowingminecart;
 
-import com.kssjw.glowingminecart.block.ModBlock;
+import com.kssjw.glowingminecart.block.ModBlockRegisterCall;
 import com.kssjw.glowingminecart.manager.LightSourceManager;
 
 import net.fabricmc.api.ModInitializer;
@@ -10,8 +10,8 @@ public class GlowingMinecart implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        // 注册光源方块
-        ModBlock.registerBlocks();
+        // 注册方块
+        ModBlockRegisterCall.registerCall();
 
         // 注册每个世界 tick 回调
         ServerTickEvents.END_WORLD_TICK.register(world -> {
