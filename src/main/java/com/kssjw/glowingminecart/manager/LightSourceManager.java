@@ -44,7 +44,7 @@ public class LightSourceManager {
 
     // 每 tick 更新光源位置
     public static void updateLightSource(AbstractMinecartEntity cart) {
-        World world = cart.getWorld();
+        World world = cart.getEntityWorld();
         if (world.isClient()) return;
 
         BlockPos newPos = cart.getBlockPos().up();
@@ -71,7 +71,7 @@ public class LightSourceManager {
         BlockPos pos = ACTIVE_LIGHTS.remove(cart);
         if (pos == null) return;
 
-        World world = cart.getWorld();
+        World world = cart.getEntityWorld();
         if (world.isClient()) return;
 
         if (world.getBlockState(pos).isOf(LightBlock.LIGHT_BLOCK)) {
