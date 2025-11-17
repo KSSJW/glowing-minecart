@@ -1,6 +1,6 @@
 package com.kssjw.glowingminecart.id;
 
-//存放 Mod 的常量，避免硬编码。
+// 存放 Mod 的常量，避免硬编码。
 public final class ModId {
 
     // Mod 唯一标识符
