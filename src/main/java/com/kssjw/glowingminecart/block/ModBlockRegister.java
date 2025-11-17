@@ -1,7 +1,7 @@
 package com.kssjw.glowingminecart.block;
 
-public class ModBlockRegisterCall {
-    public static void registerCall() {
+public class ModBlockRegister {
+    public static void registerInit() {
         LightBlock.registerBlock();
     }
 }
