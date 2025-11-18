@@ -16,9 +16,6 @@
 	"icon": "assets/glowing-minecart/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"com.kssjw.glowingminecart.GlowingMinecart"
-		],
 		"client": [
 			"com.kssjw.glowingminecart.client.GlowingMinecartClient"
 		]
