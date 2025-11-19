@@ -29,13 +29,25 @@ public interface BlockRenderViewMixin {
                 double dx = (pos.getX() + 0.5) - m.getX();
                 double dy = (pos.getY() + 0.5) - m.getY();
                 double dz = (pos.getZ() + 0.5) - m.getZ();
-                double distSq = dx*dx + dy*dy + dz*dz;
+                double distSq = dx*  dx + dy * dy + dz * dz;
 
-                double radius = 6.0;
-                if (distSq < radius*radius) {
+                final int LEGAL_LIGHT_MAX = 15; // 最大合法光照值
+                final double RADIUS = 15.0;   // 被照亮的半径
+                final int ILLUMINATION_LEVEL_MAX = 14;  // 最大光照等级
+
+                if (distSq < RADIUS * RADIUS) {
                     double dist = Math.sqrt(distSq);
-                    int decayLight = (int)Math.max(0, 14 - (dist / radius) * 14);
+
+                    // 线性衰减光照
+                    int decayLight = (int)Math.max(0, ILLUMINATION_LEVEL_MAX - (dist / RADIUS) * ILLUMINATION_LEVEL_MAX);
+
+                    // 光照等级不超过合法范围
+                    decayLight = Math.min(decayLight, LEGAL_LIGHT_MAX);
+
+                    // 提升方块光照
                     boosted = Math.max(original, decayLight);
+                    boosted = Math.min(boosted, LEGAL_LIGHT_MAX);    // 再次确认，在初次进入游戏可能因为光照等级数值过大导致崩溃
+
                     break;
                 }
             }

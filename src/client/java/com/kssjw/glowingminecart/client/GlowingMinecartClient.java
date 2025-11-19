@@ -2,19 +2,29 @@ package com.kssjw.glowingminecart.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.util.math.BlockPos;
 
 public class GlowingMinecartClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (client.world != null && client.player != null) {
-                BlockPos pos = client.player.getBlockPos();
-                // 刷新玩家周围 8 格的渲染区域
-                client.worldRenderer.scheduleBlockRenders(
-                    pos.getX() - 8, pos.getY() - 8, pos.getZ() - 8,
-                    pos.getX() + 8, pos.getY() + 8, pos.getZ() + 8
-                );
+            if (client.world != null) {
+                for (Entity e : client.world.getEntities()) {
+
+                    // 只刷新矿车附近的方块
+                    if (e instanceof AbstractMinecartEntity m) {
+                        BlockPos pos = m.getBlockPos();
+                        
+                        final int RADIUS = 15;   // 刷新矿车附近区域的半径
+
+                        client.worldRenderer.scheduleBlockRenders(
+                            pos.getX() - RADIUS, pos.getY() - RADIUS, pos.getZ() - RADIUS,
+                            pos.getX() + RADIUS, pos.getY() + RADIUS, pos.getZ() + RADIUS
+                        );
+                    }
+                }
             }
         });
     }
