@@ -1,15 +1,21 @@
 package com.kssjw.glowingminecart.client;
 
+import com.kssjw.glowingminecart.util.DelayUtil;
+
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.util.math.BlockPos;
 
-public class GlowingMinecartClient implements ClientModInitializer {
+public class GlowingMinecart implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+
+            // 注册延时执行工具
+            DelayUtil.tick();
+
             if (client.world != null) {
                 for (Entity e : client.world.getEntities()) {
 

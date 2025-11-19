@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing-minecart",
-	"version": "y25m11c9",
+	"version": "y25m11c10",
 	"name": "Glowing Minecart",
 	"description": "Minecart lighting based on the original Minecraft.",
 	"authors": [
@@ -17,7 +17,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"client": [
-			"com.kssjw.glowingminecart.client.GlowingMinecartClient"
+			"com.kssjw.glowingminecart.client.GlowingMinecart"
 		]
 	},
 	"mixins": [

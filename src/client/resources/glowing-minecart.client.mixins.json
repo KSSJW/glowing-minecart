@@ -3,7 +3,9 @@
 	"package": "com.kssjw.glowingminecart.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"BlockRenderViewMixin"
+		"BlockRenderViewMixin",
+		"ConnectMixin",
+		"DisconnectMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
