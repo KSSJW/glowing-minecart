@@ -12,15 +12,14 @@ import net.minecraft.network.ClientConnection;
 import net.minecraft.network.listener.ClientLoginPacketListener;
 
 @Mixin(ClientConnection.class)
-public class ConnectMixin {
+public abstract class ConnectMixin {
     @Inject(
         method = "connect(Ljava/lang/String;ILnet/minecraft/network/listener/ClientLoginPacketListener;)V",
         at = @At("HEAD")
     )
     private void onLoginConnect(String address, int port, ClientLoginPacketListener listener, CallbackInfo ci) {
         DelayUtil.schedule(40, () -> {
-            SharedValue.boosted = 0;
-            SharedValue.ENABLED = true;
+            SharedValue.renderEnable = true;
             System.out.println("[GlowingMinecart] Starting 启用渲染注入");
         });
         

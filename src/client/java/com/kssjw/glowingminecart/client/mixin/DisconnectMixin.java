@@ -12,11 +12,10 @@ import net.minecraft.network.ClientConnection;
 import net.minecraft.text.Text;
 
 @Mixin(ClientConnection.class)
-public class DisconnectMixin {
+public abstract class DisconnectMixin {
     @Inject(method = "disconnect", at = @At("HEAD"))
     private void onDisconnect(Text reason, CallbackInfo ci) {
-        SharedValue.ENABLED = false;
-        SharedValue.boosted = 0;
-        System.out.println("[GlowingMinecart] Cleaning 关闭渲染注入，清理残留逻辑");
+        SharedValue.renderEnable = false;
+        System.out.println("[GlowingMinecart] Cleaning 关闭渲染注入");
     }
 }
