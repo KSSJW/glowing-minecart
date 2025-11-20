@@ -6,11 +6,11 @@ import net.minecraft.client.render.WorldRenderer;
 public class BlockRenderViewUtil {
 
     // 强制刷新一次光照更新,在实体移除后调用，避免残留亮度
-    public static void forceLightUpdate() {
+    public static void forceLightUpdate(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.world != null && client.worldRenderer != null) {
             WorldRenderer renderer = client.worldRenderer;
-            renderer.reload();
+            renderer.scheduleBlockRenders(minX, minY, minZ, maxX, maxY, maxZ);
             System.out.println("[GlowingMinecart] Force light update 强制刷新光照");
         }
     }

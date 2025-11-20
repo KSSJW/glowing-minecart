@@ -11,13 +11,15 @@ import com.kssjw.glowingminecart.client.util.DelayUtil;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
+import net.minecraft.util.math.BlockPos;
 
 @Mixin(ClientWorld.class)
 public abstract class MinecartPlaceMixin {
     @Inject(method = "addEntity", at = @At("TAIL"))
     private void gm$onEntityAdded(Entity entity, CallbackInfo ci) {
         if (entity instanceof AbstractMinecartEntity) {
-            DelayUtil.schedule(5, () -> BlockRenderViewUtil.forceLightUpdate());   // 矿车放置后延时刷新渲染
+            BlockPos pos = entity.getBlockPos();
+            DelayUtil.schedule(5, () -> BlockRenderViewUtil.forceLightUpdate(pos.getX(), pos.getY(), pos.getZ(), pos.getX(), pos.getY(), pos.getZ()));   // 矿车放置后延时刷新渲染
         }
     }
 }

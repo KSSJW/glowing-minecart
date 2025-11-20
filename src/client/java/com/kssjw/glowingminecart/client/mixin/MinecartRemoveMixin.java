@@ -10,14 +10,16 @@ import com.kssjw.glowingminecart.client.util.DelayUtil;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
+import net.minecraft.util.math.BlockPos;
 
 @Mixin(Entity.class)
 public abstract class MinecartRemoveMixin {
     @Inject(method = "remove", at = @At("TAIL"))
     private void onRemove(Entity.RemovalReason reason, CallbackInfo ci) {
         Entity self = (Entity)(Object)this;
+        BlockPos pos = self.getBlockPos();
         if (self instanceof AbstractMinecartEntity) {
-            DelayUtil.schedule(5, () -> BlockRenderViewUtil.forceLightUpdate());    // 矿车被移除后延时刷新渲染
+            DelayUtil.schedule(5, () -> BlockRenderViewUtil.forceLightUpdate(pos.getX(), pos.getY(), pos.getZ(), pos.getX(), pos.getY(), pos.getZ()));    // 矿车被移除后延时刷新渲染
         }
     }
 }
