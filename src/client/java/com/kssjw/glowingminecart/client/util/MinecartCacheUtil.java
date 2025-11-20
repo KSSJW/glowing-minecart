@@ -9,7 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.util.math.BlockPos;
 
-public class MinecartCache {
+public class MinecartCacheUtil {
     private static volatile List<BlockPos> cachedMinecarts = Collections.emptyList();
 
     public static void update(ClientWorld world) {

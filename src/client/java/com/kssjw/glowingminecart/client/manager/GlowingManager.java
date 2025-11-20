@@ -3,8 +3,7 @@ package com.kssjw.glowingminecart.client.manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kssjw.glowingminecart.client.shared.SharedValue;
-import com.kssjw.glowingminecart.client.util.MinecartCache;
+import com.kssjw.glowingminecart.client.util.MinecartCacheUtil;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
@@ -19,7 +18,7 @@ public class GlowingManager {
         final int ILLUMINATION_LEVEL_MAX = 14;  // 最大光照等级
 
         // 安全开关拦截
-        if (SharedValue.renderEnable == false) return -1;
+        if (RenderSafetyManager.state() == false) return -1;
 
         if (type != LightType.BLOCK) return -1;
 
@@ -29,7 +28,7 @@ public class GlowingManager {
         int original = world.getLightingProvider().get(type).getLightLevel(pos);
         int boosted = original;
 
-        List<BlockPos> snapshot = new ArrayList<>(MinecartCache.getMinecarts());    // 快照副本
+        List<BlockPos> snapshot = new ArrayList<>(MinecartCacheUtil.getMinecarts());    // 快照副本
         for (BlockPos minecartPos : snapshot) {
 
             if (minecartPos == null) return -1;

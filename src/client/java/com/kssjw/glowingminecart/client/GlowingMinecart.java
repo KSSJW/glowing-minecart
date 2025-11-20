@@ -1,7 +1,7 @@
 package com.kssjw.glowingminecart.client;
 
 import com.kssjw.glowingminecart.client.util.DelayUtil;
-import com.kssjw.glowingminecart.client.util.MinecartCache;
+import com.kssjw.glowingminecart.client.util.MinecartCacheUtil;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -18,7 +18,7 @@ public class GlowingMinecart implements ClientModInitializer {
             DelayUtil.tick();
 
             // 注册缓存工具
-            if (client.world != null) MinecartCache.update(client.world);
+            if (client.world != null) MinecartCacheUtil.update(client.world);
 
             if (client.world != null) {
                 for (Entity e : client.world.getEntities()) {
