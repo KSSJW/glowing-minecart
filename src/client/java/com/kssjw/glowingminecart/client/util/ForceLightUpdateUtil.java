@@ -10,7 +10,8 @@ public class ForceLightUpdateUtil {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.world != null && client.worldRenderer != null) {
             WorldRenderer renderer = client.worldRenderer;
-            renderer.scheduleBlockRenders(minX, minY, minZ, maxX, maxY, maxZ);
+            final int RADIUS = 15;
+            renderer.scheduleBlockRenders(minX - RADIUS, minY - RADIUS, minZ - RADIUS, maxX + RADIUS, maxY + RADIUS, maxZ + RADIUS);
             System.out.println("[GlowingMinecart] Force light update 强制刷新光照");
         }
     }
