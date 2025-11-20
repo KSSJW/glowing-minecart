@@ -1,4 +1,4 @@
-package com.kssjw.glowingminecart.util;
+package com.kssjw.glowingminecart.client.util;
 
 public class DelayUtil {
     private static int delayTicks = -1;

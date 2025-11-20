@@ -1,4 +1,4 @@
-package com.kssjw.glowingminecart.util;
+package com.kssjw.glowingminecart.client.util;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.WorldRenderer;

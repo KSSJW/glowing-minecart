@@ -1,4 +1,4 @@
-package com.kssjw.glowingminecart.util;
+package com.kssjw.glowingminecart.client.util;
 
 import java.util.ArrayList;
 import java.util.List;

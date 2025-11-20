@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.kssjw.glowingminecart.client.shared.SharedValue;
-import com.kssjw.glowingminecart.util.DelayUtil;
+import com.kssjw.glowingminecart.client.util.DelayUtil;
 
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.listener.ClientLoginPacketListener;
