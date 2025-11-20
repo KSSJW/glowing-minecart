@@ -10,12 +10,8 @@ public class BlockRenderViewUtil {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.world != null && client.worldRenderer != null) {
             WorldRenderer renderer = client.worldRenderer;
-            
-            // 延迟触发一次光照重建
-            DelayUtil.schedule(5, () -> {
-                renderer.reload();
-                System.out.println("[GlowingMinecart] Force light update 强制刷新光照");
-            });
+            renderer.reload();
+            System.out.println("[GlowingMinecart] Force light update 强制刷新光照");
         }
     }
 }

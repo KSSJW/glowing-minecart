@@ -1,5 +1,8 @@
 package com.kssjw.glowingminecart.client.manager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.kssjw.glowingminecart.client.shared.SharedValue;
 import com.kssjw.glowingminecart.client.util.MinecartCache;
 
@@ -26,7 +29,11 @@ public class GlowingManager {
         int original = world.getLightingProvider().get(type).getLightLevel(pos);
         int boosted = original;
 
-        for (BlockPos minecartPos : MinecartCache.getMinecarts()) {
+        List<BlockPos> snapshot = new ArrayList<>(MinecartCache.getMinecarts());    // 快照副本
+        for (BlockPos minecartPos : snapshot) {
+
+            if (minecartPos == null) return -1;
+
             double dx = (pos.getX() + 0.5) - minecartPos.getX();
             double dy = (pos.getY() + 0.5) - minecartPos.getY();
             double dz = (pos.getZ() + 0.5) - minecartPos.getZ();
