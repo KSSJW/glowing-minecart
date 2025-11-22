@@ -1,8 +1,12 @@
 {
-	"required": false,
-	"package": "com.kssjw.glowingminecart.mixin",
-	"compatibilityLevel": "JAVA_17",
+	"required": true,
+	"package": "com.kssjw.glowingminecart.client.mixin",
+	"compatibilityLevel": "JAVA_16",
 	"mixins": [
+		"BlockRenderViewMixin",
+		"DisconnectMixin",
+		"MinecartPlaceMixin",
+		"MinecartRemoveMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
