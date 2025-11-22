@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing-minecart",
-	"version": "1.16-release.1",
+	"version": "1.15-release.1",
 	"name": "Glowing Minecart",
 	"description": "Minecart lighting based on the original Minecraft.",
 	"authors": [
@@ -24,8 +24,8 @@
 		"glowing-minecart.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.7.4",
-		"minecraft": "1.16.x",
+		"fabricloader": ">=0.7.2",
+		"minecraft": "1.15.x",
 		"java": ">=8",
 		"fabric": "*"
 	},
