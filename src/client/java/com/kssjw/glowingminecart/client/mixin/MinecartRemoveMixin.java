@@ -15,7 +15,7 @@ import net.minecraft.util.math.BlockPos;
 @Mixin(Entity.class)
 public abstract class MinecartRemoveMixin {
     @Inject(method = "remove", at = @At("TAIL"))
-    private void onRemove(Entity.RemovalReason reason, CallbackInfo ci) {
+    private void onRemove(CallbackInfo ci) {
         Entity self = (Entity)(Object)this;
         BlockPos pos = self.getBlockPos();
         if (self instanceof AbstractMinecartEntity) {
