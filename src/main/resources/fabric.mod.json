@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing-minecart",
-	"version": "y25m11c16",
+	"version": "1.20.2-release.1",
 	"name": "Glowing Minecart",
 	"description": "Minecart lighting based on the original Minecraft.",
 	"authors": [
@@ -28,9 +28,9 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.17.2",
-		"minecraft": ">=1.21.9",
-		"java": ">=21",
+		"fabricloader": ">=0.14.22",
+		"minecraft": ">=1.20.2 <=1.20.6",
+		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
