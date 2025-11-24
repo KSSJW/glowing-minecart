@@ -1,0 +1,9 @@
+{
+    "text.autoconfig.glowing-minecart.title": "Glowing Minecart 配置",
+
+    "text.autoconfig.glowing-minecart.option.intRadius": "光照半径",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "矿车照亮范围的半径。",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "光照等级",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "矿车照亮的等级。"
+}

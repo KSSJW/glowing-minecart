@@ -1,0 +1,9 @@
+{
+    "text.autoconfig.glowing-minecart.title": "Glowing Minecart Configuration",
+
+    "text.autoconfig.glowing-minecart.option.intRadius": "Lighting Radius",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "The radius illuminated by the minecarts.",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "Lighting Luminance",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "The brightness level of the minecarts' lighting."
+}

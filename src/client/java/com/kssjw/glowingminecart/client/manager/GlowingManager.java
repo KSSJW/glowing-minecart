@@ -3,6 +3,7 @@ package com.kssjw.glowingminecart.client.manager;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kssjw.glowingminecart.client.util.GetConfigUtil;
 import com.kssjw.glowingminecart.client.util.MinecartCacheUtil;
 
 import net.minecraft.client.MinecraftClient;
@@ -14,8 +15,8 @@ public class GlowingManager {
     public static int boostedValue(LightType type, BlockPos pos) {
         
         final int LEGAL_LIGHT_MAX = 15; // 最大合法光照值
-        final double RADIUS = 15.0;   // 被照亮的半径
-        final int ILLUMINATION_LEVEL_MAX = 14;  // 最大光照等级
+        final double RADIUS = GetConfigUtil.getRadius();
+        final int ILLUMINATION_LEVEL_MAX = GetConfigUtil.getLuminance();
 
         // 安全开关拦截
         if (RenderSafetyManager.state() == false) return -1;

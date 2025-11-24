@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing-minecart",
-	"version": "y25m11c16",
+	"version": "y25m11c17",
 	"name": "Glowing Minecart",
 	"description": "Minecart lighting based on the original Minecraft.",
 	"authors": [
@@ -13,11 +13,14 @@
 		"issues": "https://github.com/KSSJW/glowing-minecart/issues"
 	},
 	"license": "GPL-3.0",
-	"icon": "assets/glowing-minecart/icon.png",
+	"icon": "assets/glowing-minecart/logo/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
 			"com.kssjw.glowingminecart.client.GlowingMinecart"
+		],
+		"modmenu": [
+			"com.kssjw.glowingminecart.client.menu.ConfigMenu"
 		]
 	},
 	"mixins": [
@@ -31,9 +34,10 @@
 		"fabricloader": ">=0.17.2",
 		"minecraft": ">=1.21.9",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"cloth-config": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"modmenu": "*"
 	}
 }

@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.kssjw.glowingminecart.client.util.DelayUtil;
-import com.kssjw.glowingminecart.client.util.ForceLightUpdateUtil;
+import com.kssjw.glowingminecart.client.util.LightUpdateUtil;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
@@ -19,7 +19,7 @@ public abstract class MinecartRemoveMixin {
         Entity self = (Entity)(Object)this;
         BlockPos pos = self.getBlockPos();
         if (self instanceof AbstractMinecartEntity) {
-            DelayUtil.schedule(5, () -> ForceLightUpdateUtil.update(pos.getX(), pos.getY(), pos.getZ(), pos.getX(), pos.getY(), pos.getZ()));    // 矿车被移除后延时刷新渲染
+            DelayUtil.schedule(5, () -> LightUpdateUtil.update(pos.getX(), pos.getY(), pos.getZ(), pos.getX(), pos.getY(), pos.getZ()));    // 矿车被移除后延时刷新渲染
         }
     }
 }
