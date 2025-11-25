@@ -12,7 +12,7 @@ public class LightUpdateUtil {
             WorldRenderer renderer = client.worldRenderer;
             final int RADIUS = 15;
             renderer.scheduleBlockRenders(minX - RADIUS, minY - RADIUS, minZ - RADIUS, maxX + RADIUS, maxY + RADIUS, maxZ + RADIUS);
-            System.out.println("[GlowingMinecart] Refresh Lighting 刷新光照");
+            LogUtil.print("The lighting has been refreshed.");
         }
     }
 
@@ -21,7 +21,7 @@ public class LightUpdateUtil {
         if (client.world != null && client.worldRenderer != null) {
             WorldRenderer renderer = client.worldRenderer;
             renderer.reload();
-            System.out.println("[GlowingMinecart] Reload Renderer 重载渲染器");
+            LogUtil.print("The renderer has been reloaded.");
             ToastUtil.toast("toast.glowing-minecart.reload", "toast.glowing-minecart.reload.desc");
         }
     }

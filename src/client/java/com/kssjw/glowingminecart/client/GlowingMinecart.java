@@ -5,6 +5,7 @@ import com.kssjw.glowingminecart.client.manager.ConfigManager;
 import com.kssjw.glowingminecart.client.manager.RefreshManager;
 import com.kssjw.glowingminecart.client.util.DelayUtil;
 import com.kssjw.glowingminecart.client.util.LightUpdateUtil;
+import com.kssjw.glowingminecart.client.util.LogUtil;
 import com.kssjw.glowingminecart.client.util.MinecartCacheUtil;
 
 import me.shedaniel.autoconfig.AutoConfig;
@@ -25,6 +26,7 @@ public class GlowingMinecart implements ClientModInitializer {
         holder.registerSaveListener((configHolder, config) -> {
             ConfigManager.reloadAction();
             LightUpdateUtil.reload();
+            LogUtil.print("The configuration has been saved.");
             return ActionResult.SUCCESS;
         });
 
@@ -32,6 +34,7 @@ public class GlowingMinecart implements ClientModInitializer {
         holder.registerLoadListener((configHolder, config) -> {
             ConfigManager.reloadAction();
             LightUpdateUtil.reload();
+            LogUtil.print("Configuration has been loaded.");
             return ActionResult.SUCCESS;
         });
 
