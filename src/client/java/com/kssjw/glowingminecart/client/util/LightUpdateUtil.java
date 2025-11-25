@@ -22,6 +22,7 @@ public class LightUpdateUtil {
             WorldRenderer renderer = client.worldRenderer;
             renderer.reload();
             System.out.println("[GlowingMinecart] Reload Renderer 重载渲染器");
+            ToastUtil.toast("toast.glowing-minecart.reload", "toast.glowing-minecart.reload.desc");
         }
     }
 }

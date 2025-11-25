@@ -1,7 +1,5 @@
 package com.kssjw.glowingminecart.client.manager;
 
-import com.kssjw.glowingminecart.client.util.GetConfigUtil;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
@@ -15,7 +13,7 @@ public class RefreshManager {
             if (e instanceof AbstractMinecartEntity m) {
                 BlockPos pos = m.getBlockPos();
                 
-                final int RADIUS = (int)GetConfigUtil.getRadius() + 1;   // 刷新矿车附近区域的半径
+                final int RADIUS = (int)ConfigManager.getRadius() + 1;   // 刷新矿车附近区域的半径
 
                 client.worldRenderer.scheduleBlockRenders(
                     pos.getX() - RADIUS, pos.getY() - RADIUS, pos.getZ() - RADIUS,

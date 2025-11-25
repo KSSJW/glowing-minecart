@@ -1,6 +1,7 @@
 package com.kssjw.glowingminecart.client;
 
 import com.kssjw.glowingminecart.client.config.ValueConfig;
+import com.kssjw.glowingminecart.client.manager.ConfigManager;
 import com.kssjw.glowingminecart.client.manager.RefreshManager;
 import com.kssjw.glowingminecart.client.util.DelayUtil;
 import com.kssjw.glowingminecart.client.util.LightUpdateUtil;
@@ -22,12 +23,14 @@ public class GlowingMinecart implements ClientModInitializer {
 
         // 监听器，保存配置后触发
         holder.registerSaveListener((configHolder, config) -> {
+            ConfigManager.reloadAction();
             LightUpdateUtil.reload();
             return ActionResult.SUCCESS;
         });
 
         // 监听器，加载配置后触发
         holder.registerLoadListener((configHolder, config) -> {
+            ConfigManager.reloadAction();
             LightUpdateUtil.reload();
             return ActionResult.SUCCESS;
         });
