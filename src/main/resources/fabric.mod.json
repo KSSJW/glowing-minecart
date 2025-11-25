@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing-minecart",
-	"version": "y25m11b20",
+	"version": "2.0.0-rc.1+1.21.9",
 	"name": "Glowing Minecart",
 	"description": "Minecart lighting based on the original Minecraft. Feature Version: §ay25m11b19",
 	"authors": [
