@@ -1,6 +1,7 @@
 # Glowing Minecart
 - Based on the original Minecraft minecart lighting.
 - The minecarts have dynamic lighting in real time.
+- Custom rendering configurations are supported.
 - Rendered only on the **client** side.
 
 ## Loader
@@ -15,7 +16,10 @@
 [![CurseForge](https://img.shields.io/badge/Published%20in-CurseForge-f16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/glowing-minecart)
 
 ## Compatibility
-- You need to install the **Fabric API**.
+- Fabric API (Required)
+- Cloth Config API (Required)
+- Mod Menu (Recommended)
 
 ## Gallery
 ![Glowing minecarts](https://raw.githubusercontent.com/KSSJW/glowing-minecart/refs/heads/dev/Big.png)
+![Configuration](https://raw.githubusercontent.com/KSSJW/glowing-minecart/refs/heads/dev/Configuration.png)
