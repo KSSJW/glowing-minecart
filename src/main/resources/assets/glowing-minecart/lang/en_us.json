@@ -1,0 +1,20 @@
+{
+    "text.autoconfig.glowing-minecart.title": "Glowing Minecart Configuration",
+
+    "text.autoconfig.glowing-minecart.option.reloadAction": "Manually Reload the Renderer",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[0]": "You can set it to True separately,",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[1]": "so that only the renderer is reloaded",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[2]": "without needing to change the configuration",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[3]": "to trigger the reload.",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "(In fact, the renderer is reloaded every time",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "the configuration is changed.)",
+
+    "text.autoconfig.glowing-minecart.option.intRadius": "Lighting Radius",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "The radius illuminated by the minecarts.",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "Lighting Luminance",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "The brightness level of the minecarts' lighting.",
+
+    "toast.glowing-minecart.reload": "Reload the Render",
+    "toast.glowing-minecart.reload.desc": "The renderer has been reloaded. (OwO)"
+}

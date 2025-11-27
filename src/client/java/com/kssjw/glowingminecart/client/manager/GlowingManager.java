@@ -14,8 +14,8 @@ public class GlowingManager {
     public static int boostedValue(LightType type, BlockPos pos) {
         
         final int LEGAL_LIGHT_MAX = 15; // 最大合法光照值
-        final double RADIUS = 15.0;   // 被照亮的半径
-        final int ILLUMINATION_LEVEL_MAX = 14;  // 最大光照等级
+        final double RADIUS = ConfigManager.getRadius();
+        final int ILLUMINATION_LEVEL_MAX = ConfigManager.getLuminance();
 
         // 安全开关拦截
         if (RenderSafetyManager.state() == false) return -1;
