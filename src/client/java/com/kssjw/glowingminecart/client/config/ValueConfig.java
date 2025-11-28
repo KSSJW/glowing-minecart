@@ -11,13 +11,13 @@ public class ValueConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 6)
     public boolean reloadAction = false;
     
-    // 被照亮的半径 （int类型）
-    @ConfigEntry.BoundedDiscrete(min = 0, max = 15) // 数值范围
-    @ConfigEntry.Gui.Tooltip(count = 1) // 显示文字行数
-    public int intRadius = 15;
-
     // 亮度等级
     @ConfigEntry.BoundedDiscrete(min = 0, max = 15)
-    @ConfigEntry.Gui.Tooltip(count = 1)
+    @ConfigEntry.Gui.Tooltip(count = 2)
     public int luminance = 14;
+    
+    // 被照亮的半径 （int类型）
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 15) // 数值范围
+    @ConfigEntry.Gui.Tooltip(count = 1) // 显示文字行数
+    public int intRadius = 15;
 }

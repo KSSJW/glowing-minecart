@@ -14,16 +14,19 @@ public class GlowingManager {
     public static int boostedValue(LightType type, BlockPos pos) {
         
         final int LEGAL_LIGHT_MAX = 15; // 最大合法光照值
-        final double RADIUS = ConfigManager.getRadius();
         final int ILLUMINATION_LEVEL_MAX = ConfigManager.getLuminance();
+        final double RADIUS = ConfigManager.getRadius();
 
         // 安全开关拦截
         if (RenderSafetyManager.state() == false) return -1;
 
-        if (type != LightType.BLOCK) return -1;
+        // 照亮等级为 0 时不更改渲染
+        if (ILLUMINATION_LEVEL_MAX == 0) return -1;
 
         ClientWorld world = MinecraftClient.getInstance().world;
         if (world == null) return -1;
+
+        if (type != LightType.BLOCK) return -1;
 
         int original = world.getLightingProvider().get(type).getLightLevel(pos);
         int boosted = original;

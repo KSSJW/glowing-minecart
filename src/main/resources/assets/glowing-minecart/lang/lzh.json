@@ -1,0 +1,21 @@
+{
+    "text.autoconfig.glowing-minecart.title": "明車之設",
+
+    "text.autoconfig.glowing-minecart.option.reloadAction": "手為再啟繪器",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[0]": "君可獨設之為 真，",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[1]": "如此唯再啟繪器，不必改設以致之。",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[2]": "（實則，每改設，輒繪器復啟。）",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[3]": "",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "耀階",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[0]": "車耀之階。",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[1]": "（為 零 則光閉。）",
+
+    "text.autoconfig.glowing-minecart.option.intRadius": "耀距",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "車耀所及之距。",
+
+    "toast.glowing-minecart.reload": "再啟繪器",
+    "toast.glowing-minecart.reload.desc": "繪器再啟之。「OwO」"
+}
