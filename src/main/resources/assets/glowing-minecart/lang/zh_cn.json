@@ -9,11 +9,12 @@
     "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "",
     "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "",
 
+    "text.autoconfig.glowing-minecart.option.luminance": "光照等级",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[0]": "矿车照亮的等级。",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[1]": "（设置为 0 时关闭关照。）",
+
     "text.autoconfig.glowing-minecart.option.intRadius": "光照半径",
     "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "矿车照亮范围的半径。",
-
-    "text.autoconfig.glowing-minecart.option.luminance": "光照等级",
-    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "矿车照亮的等级。",
 
     "toast.glowing-minecart.reload": "重载渲染器",
     "toast.glowing-minecart.reload.desc": "渲染器已被重载。(OwO)"

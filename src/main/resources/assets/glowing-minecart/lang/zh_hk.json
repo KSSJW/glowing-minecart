@@ -1,0 +1,21 @@
+{
+    "text.autoconfig.glowing-minecart.title": "Glowing Minecart 配寘",
+
+    "text.autoconfig.glowing-minecart.option.reloadAction": "手動重載渲染器",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[0]": "您可以單獨把它設定為True，",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[1]": "這樣只重載渲染器而不需要更改配寘來觸發重載。",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[2]": "（事實上，在每次更改配寘後都會重載渲染器。）",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[3]": "",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "",
+    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "光照等級",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[0]": "礦車照亮的等級。",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[1]": "（設定為 0 時關閉關照。）",
+
+    "text.autoconfig.glowing-minecart.option.intRadius": "光照半徑",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "礦車照亮範圍的半徑。",
+
+    "toast.glowing-minecart.reload": "重載渲染器",
+    "toast.glowing-minecart.reload.desc": "渲染器已被重載。(OwO)"
+}
