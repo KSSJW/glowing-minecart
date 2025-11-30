@@ -49,12 +49,10 @@ public class GlowingManager {
 
                 // 光照等级不超过合法范围
                 decayLight = Math.min(decayLight, LEGAL_LIGHT_MAX);
+                boosted = Math.min(boosted, LEGAL_LIGHT_MAX);
 
-                // 提升方块光照
-                boosted = Math.max(original, decayLight);
-                boosted = Math.min(boosted, LEGAL_LIGHT_MAX);    // 再次确认，在初次进入游戏可能因为光照等级数值过大导致崩溃
-
-                break;
+                // 提升方块光照，取较大值
+                boosted = Math.max(boosted, decayLight);
             }
         }
         return boosted;
