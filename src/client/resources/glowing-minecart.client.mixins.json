@@ -4,9 +4,9 @@
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"BlockRenderViewMixin",
-		"DisconnectMixin",
-		"MinecartPlaceMixin",
-		"MinecartRemoveMixin"
+		"CartAddMixin",
+		"CartRemoveMixin",
+		"DisconnectMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
