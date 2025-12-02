@@ -1,19 +1,48 @@
 {
     "text.autoconfig.glowing-minecart.title": "Glowing Minecart 配置",
 
-    "text.autoconfig.glowing-minecart.option.reloadAction": "手动重载渲染器",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[0]": "您可以单独把它设置为True，",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[1]": "这样只重载渲染器而不需要更改配置来触发重载。",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[2]": "（事实上，在每次更改配置后都会重载渲染器。）",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[3]": "",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "",
+    "text.autoconfig.glowing-minecart.category.general": "通用设置",
+    "text.autoconfig.glowing-minecart.category.types": "照明种类",
+    "text.autoconfig.glowing-minecart.category.advanced": "高级设置",
+
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer": "手动重载渲染器",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[0]": "您可以单独把它设置为 True，",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[1]": "这样只重载渲染器而不需要更改配置来触发重载。",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[2]": "（事实上，在每次更改配置后都会重载渲染器。）",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[3]": "",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[4]": "",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[5]": "",
+
+    "text.autoconfig.glowing-minecart.option.enabledByUser": "光照开关",
+    "text.autoconfig.glowing-minecart.option.enabledByUser.@Tooltip": "是否启用矿车光照。",
+
+    "text.autoconfig.glowing-minecart.option.luminance": "光照等级",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "矿车照亮的等级。",
 
     "text.autoconfig.glowing-minecart.option.intRadius": "光照半径",
     "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "矿车照亮范围的半径。",
 
-    "text.autoconfig.glowing-minecart.option.luminance": "光照等级",
-    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "矿车照亮的等级。",
+    "text.autoconfig.glowing-minecart.option.applyToMinecart": "作用于 矿车",
+    "text.autoconfig.glowing-minecart.option.applyToChestMinecart": "作用于 运输矿车",
+    "text.autoconfig.glowing-minecart.option.applyToFurnaceMinecart": "作用于 动力矿车",
+    "text.autoconfig.glowing-minecart.option.applyToTNTMinecart": "作用于 TNT矿车",
+    "text.autoconfig.glowing-minecart.option.applyToHopperMinecart": "作用于 漏斗矿车",
+    "text.autoconfig.glowing-minecart.option.applyToSpawnerMinecart": "作用于 刷怪笼矿车",
+    "text.autoconfig.glowing-minecart.option.applyToCommandBlockMinecart": "作用于 命令方块矿车",
+
+    "text.autoconfig.glowing-minecart.option.enableConstantLight": "恒定光照",
+    "text.autoconfig.glowing-minecart.option.enableConstantLight.@Tooltip": "在一定范围内保持光照恒定。",
+
+    "text.autoconfig.glowing-minecart.option.intConstantLightRadius": "恒定光照半径",
+
+    "text.autoconfig.glowing-minecart.option.onlyInMotion": "仅运动中的矿车照明",
+    "text.autoconfig.glowing-minecart.option.onlyInMotion.@Tooltip[0]": "启用后，只有当矿车在运动中才会照明，",
+    "text.autoconfig.glowing-minecart.option.onlyInMotion.@Tooltip[1]": "而静止状态下不会照明",
+
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger": "仅有乘客的矿车照明",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[0]": "启用后，只有当矿车有乘客才会照明，",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[1]": "而空矿车不会照明。",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[2]": "",
 
     "toast.glowing-minecart.reload": "重载渲染器",
     "toast.glowing-minecart.reload.desc": "渲染器已被重载。(OwO)"

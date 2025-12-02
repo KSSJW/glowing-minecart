@@ -15,7 +15,7 @@ import com.kssjw.glowingminecart.client.manager.GlowingManager;
 public interface BlockRenderViewMixin {
     @Inject(method = "getLightLevel", at = @At("TAIL"), cancellable = true)
     private void gm$boostMinecartLight(LightType type, BlockPos pos, CallbackInfoReturnable<Integer> cir) {
-        int boosted = GlowingManager.boostedValue(type, pos);
+        int boosted = GlowingManager.getBoosted(type, pos);
         if (boosted == -1) return;
         cir.setReturnValue(boosted);
     }

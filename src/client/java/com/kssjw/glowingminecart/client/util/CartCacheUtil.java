@@ -9,7 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.util.math.BlockPos;
 
-public class MinecartCacheUtil {
+public class CartCacheUtil {
     private static volatile List<BlockPos> cachedMinecarts = Collections.emptyList();
 
     public static void update(ClientWorld world) {
@@ -18,7 +18,11 @@ public class MinecartCacheUtil {
         cachedMinecarts.clear();
         for (Entity entity : world.getEntities()) {
             if (entity instanceof AbstractMinecartEntity) {
-            newList.add(entity.getBlockPos());
+
+                // 筛选排除
+                if (CartFilterUtil.isCartExcluded(entity) == true) continue;
+
+                newList.add(entity.getBlockPos());
             }
         }
         cachedMinecarts = newList;
