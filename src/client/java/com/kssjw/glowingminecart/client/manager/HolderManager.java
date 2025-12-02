@@ -17,7 +17,7 @@ public class HolderManager {
 
         // 监听器，保存配置后触发
         holder.registerSaveListener((configHolder, config) -> {
-            ConfigManager.reloadAction();
+            ConfigManager.reloadRenderer();
             LightUpdateUtil.reload();
             LogUtil.print("The configuration has been saved.");
             return ActionResult.SUCCESS;
@@ -25,7 +25,7 @@ public class HolderManager {
 
         // 监听器，加载配置后触发
         holder.registerLoadListener((configHolder, config) -> {
-            ConfigManager.reloadAction();
+            ConfigManager.reloadRenderer();
             LightUpdateUtil.reload();
             LogUtil.print("Configuration has been loaded.");
             return ActionResult.SUCCESS;

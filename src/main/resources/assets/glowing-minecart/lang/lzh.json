@@ -1,21 +1,49 @@
 {
     "text.autoconfig.glowing-minecart.title": "明車之設",
 
-    "text.autoconfig.glowing-minecart.option.reloadAction": "手為再啟繪器",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[0]": "君可獨設之為 真，",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[1]": "如此唯再啟繪器，不必改設以致之。",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[2]": "（實則，每改設，輒繪器復啟。）",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[3]": "",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[4]": "",
-    "text.autoconfig.glowing-minecart.option.reloadAction.@Tooltip[5]": "",
+    "text.autoconfig.glowing-minecart.category.general": "常設",
+    "text.autoconfig.glowing-minecart.category.types": "光類",
+    "text.autoconfig.glowing-minecart.category.advanced": "高設",
+
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer": "手為再啟繪器",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[0]": "君可獨設之為 真",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[1]": "如此唯再啟繪器 不必改設以致之",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[2]": "（實則 每改設 輒繪器復啟）",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[3]": "",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[4]": "",
+    "text.autoconfig.glowing-minecart.option.shouldReloadRenderer.@Tooltip[5]": "",
+
+    "text.autoconfig.glowing-minecart.option.enabledByUser": "耀啟",
+    "text.autoconfig.glowing-minecart.option.enabledByUser.@Tooltip": "耀啟否",
 
     "text.autoconfig.glowing-minecart.option.luminance": "耀階",
-    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[0]": "車耀之階。",
-    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip[1]": "（為 零 則光閉。）",
+    "text.autoconfig.glowing-minecart.option.luminance.@Tooltip": "車耀之階",
 
     "text.autoconfig.glowing-minecart.option.intRadius": "耀距",
-    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "車耀所及之距。",
+    "text.autoconfig.glowing-minecart.option.intRadius.@Tooltip": "車耀所及之距",
+
+    "text.autoconfig.glowing-minecart.option.applyToMinecart": "施於 礦車",
+    "text.autoconfig.glowing-minecart.option.applyToChestMinecart": "施於 箱礦車",
+    "text.autoconfig.glowing-minecart.option.applyToFurnaceMinecart": "施於 爐礦車",
+    "text.autoconfig.glowing-minecart.option.applyToTNTMinecart": "施於 灹藥礦車",
+    "text.autoconfig.glowing-minecart.option.applyToHopperMinecart": "施於 漏斗礦車",
+    "text.autoconfig.glowing-minecart.option.applyToSpawnerMinecart": "施於 孳衍籠礦車",
+    "text.autoconfig.glowing-minecart.option.applyToCommandBlockMinecart": "施於 命令塊礦車",
+
+    "text.autoconfig.glowing-minecart.option.enableConstantLight": "恆光",
+    "text.autoconfig.glowing-minecart.option.enableConstantLight.@Tooltip": "於定界之中，光明不衰。",
+
+    "text.autoconfig.glowing-minecart.option.intConstantLightRadius": "恆光之界",
+
+    "text.autoconfig.glowing-minecart.option.onlyInMotion": "唯動則耀",
+    "text.autoconfig.glowing-minecart.option.onlyInMotion.@Tooltip[0]": "若啟之，礦車惟行則光，",
+    "text.autoconfig.glowing-minecart.option.onlyInMotion.@Tooltip[1]": "止則黯然。",
+
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger": "唯載則耀",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[0]": "若啟之，礦車惟載人則光，",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[1]": "無人則黯，",
+    "text.autoconfig.glowing-minecart.option.onlyHasPassenger.@Tooltip[2]": "空則不耀。",
 
     "toast.glowing-minecart.reload": "再啟繪器",
-    "toast.glowing-minecart.reload.desc": "繪器再啟之。「OwO」"
+    "toast.glowing-minecart.reload.desc": "繪器再啟之 口凵口"
 }

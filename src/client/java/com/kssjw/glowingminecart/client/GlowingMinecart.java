@@ -3,7 +3,7 @@ package com.kssjw.glowingminecart.client;
 import com.kssjw.glowingminecart.client.manager.HolderManager;
 import com.kssjw.glowingminecart.client.manager.RefreshManager;
 import com.kssjw.glowingminecart.client.util.DelayUtil;
-import com.kssjw.glowingminecart.client.util.MinecartCacheUtil;
+import com.kssjw.glowingminecart.client.util.CartCacheUtil;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -22,7 +22,7 @@ public class GlowingMinecart implements ClientModInitializer {
             DelayUtil.tick();
 
             // 注册缓存工具
-            if (client.world != null) MinecartCacheUtil.update(client.world);
+            if (client.world != null) CartCacheUtil.update(client.world);
 
             // 注册刷新工具
             if (client.world != null) RefreshManager.refresh(client);
