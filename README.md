@@ -18,6 +18,9 @@
 - Cloth Config API (Required)
 - Mod Menu (Recommended)
 
+## Progress
+Check out the latest development progress here. [Development Progress](https://windysky.gitbook.io/main/minecraft/glowing-minecart/version)
+
 ## Gallery
 ![Glowing minecarts](https://raw.githubusercontent.com/KSSJW/glowing-minecart/refs/heads/dev/Big.png)
 ![Configuration](https://raw.githubusercontent.com/KSSJW/glowing-minecart/refs/heads/dev/Configuration.png)
