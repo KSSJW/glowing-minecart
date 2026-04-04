@@ -19,7 +19,7 @@
 - Mod Menu (Recommended)
 
 ## Progress
-Check out the latest development progress here. [Development Progress](https://windysky.gitbook.io/main/minecraft/glowing-minecart/version)
+Check out the latest development progress here. [Development Progress](https://www.windysky.top/docs/minecraft-java-edition/glowing-minecart/version)
 
 ## Gallery
 ![Glowing minecarts](https://raw.githubusercontent.com/KSSJW/glowing-minecart/refs/heads/dev/Big.png)
